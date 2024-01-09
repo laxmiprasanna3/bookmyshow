@@ -64,6 +64,24 @@ function NavLg(){
 
 const Navbar =()=>{
     //return <NavLg/>
+    return (
+        <>
+            <nav className="bg-black px-4 my-3">
+                {/*smaller NavBar-Mobile*/}
+                <div className="md:hidden">
+                    <NavSm />
+                </div>
+                {/*Medium screen size-Tab */}
+                <div className="hidden md:flex lg:hidden">
+                    <NavMd />
+                </div>
+                {/*Large Screen size -Laptop */}
+                <div className="hidden md:hidden lg:flex">
+                    <NavLg />
+                </div>
+            </nav>
+        </>
+    )
 }
 
 export default Navbar
