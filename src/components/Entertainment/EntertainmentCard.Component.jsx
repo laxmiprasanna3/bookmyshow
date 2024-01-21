@@ -74,4 +74,4 @@ const EntertainmentCardSlider =()=>{
         </>
     )
 }
-export default EntertainmentCardSlider
+export default EntertainmentCardSlider;

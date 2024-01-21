@@ -155,7 +155,7 @@ const HeroCarousel =()=>{
         }
       ]
     }
-    return<>
+    return(<>
         <div className='lg:hidden'>
             <HeroSlider {...settings}>
                 {
@@ -181,5 +181,6 @@ const HeroCarousel =()=>{
             </HeroSlider>
         </div>
     </>
+    );
 }
 export default HeroCarousel
