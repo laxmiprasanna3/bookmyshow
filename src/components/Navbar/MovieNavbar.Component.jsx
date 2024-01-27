@@ -1,22 +1,23 @@
-import React, { useContext } from "react";
-import { BiChevronDown, BiMenu, BiSearch, BiShareAlt } from "react-icons/bi";
-import { MovieContext } from "../../context/Movie.context";
+import React from "react";
+import { BiChevronDown, BiMenu, BiSearch } from "react-icons/bi";
 
-const NavSm = () => {
-  const { movie } = useContext(MovieContext);
+function NavSm() {
   return (
     <>
-    <div className="text-gray-700 flex items-center justify-between">
+      <div className="text-white flex items-center justify-between">
         <div>
-            <h3 className="text-xl font-bold">{movie.original_title}</h3>
+          <h3 className="text-xl font-bold">It All Starts Here!</h3>
+          <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
+            Hampi <BiChevronDown />
+          </span>
         </div>
-    </div>
-    <div className="w-8 h-8">
-        <BiShareAlt className="w-full h-full"/>
-    </div>
+        <div className="w-8 h-8">
+          <BiSearch className="w-full h-full" />
+        </div>
+      </div>
     </>
   );
-};
+}
 
 function NavMd() {
   return (
@@ -30,7 +31,7 @@ function NavMd() {
       </div>
     </>
   );
-};
+}
 
 function NavLg() {
   return (
@@ -40,7 +41,7 @@ function NavLg() {
           <div className="w-10 h-10">
             <img
               src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="bookMyShowLogo"
+              alt="logo"
               className="w-full h-full"
             />
           </div>
@@ -49,43 +50,43 @@ function NavLg() {
             <input
               type="search"
               className="w-full bg-transparent border-none focus:outline-none"
-              placeholder="search for movies, events, plays, sports and activities"
+              placeholder="Search for movies, events, plays, sports and activities"
             />
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-gray-300 text-base flex items-center cursor-pointer hover:text-white">
-            Miryalaguda <BiChevronDown />
+          <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white ">
+            Hampi <BiChevronDown />
           </span>
           <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
-            sign In
+            Sign In
           </button>
-          <div className="w-8 h-6 text-white">
+          <div className="w-8 h-8 text-white">
             <BiMenu className="w-full h-full" />
           </div>
         </div>
       </div>
     </>
   );
-};
+}
+
 const MovieNavbar = () => {
-   return (
-     <>
-       <nav className="bg-black px-4 my-3">
-         {/*smaller NavBar-Mobile*/}
-         <div className="md:hidden">
-           <NavSm />
-         </div>
-         {/*Medium screen size-Tab */}
-         <div className="hidden md:flex lg:hidden">
-           <NavMd />
-         </div>
-         {/*Large Screen size -Laptop */}
-         <div className="hidden md:hidden lg:flex">
-           <NavLg />
-         </div>
-       </nav>
-     </>
-   );
+  return (
+    <nav className="bg-darkBackground-700 px-4 py-3">
+      {/* Mobile Screen Navbar */}
+      <div className="md:hidden">
+        <NavSm />
+      </div>
+      {/* Medium Screen Size */}
+      <div className="hidden md:flex lg:hidden">
+        <NavMd />
+      </div>
+      {/* Large Screen Size */}
+      <div className="hidden md:hidden lg:flex">
+        <NavLg />
+      </div>
+    </nav>
+  );
 };
+
 export default MovieNavbar;
