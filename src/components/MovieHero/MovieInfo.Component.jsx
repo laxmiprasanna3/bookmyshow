@@ -29,7 +29,7 @@ const MovieInfo = () => {
         <div className="text-black flex flex-col gap-2 md:px-4">
           <h4 className="font-semibold">4.2k rating</h4>
           <h4 className="font-semibold">
-            Kannada, English, Hindi, Telegu, Tamil
+            Telugu, English, Hindi, kannada, Tamil
           </h4>
           <h4 className="font-semibold">
             {movie.runtime} min | {genres}

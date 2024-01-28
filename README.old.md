@@ -47,3 +47,68 @@
 
     
     theMovieDb APIKey = 8609c61bad2a183b7a288df6d8d39b61
+
+    # Devops
+    > Dev-Development
+    > Ops-Operation
+
+    Dev                                               Ops
+    (Developer)---------------share code-------------->operations(Testing,scaling and Bug Fixing)
+
+    Dev------sharecode------>Testing team-----|
+                                              |------code is ok----->operations
+                                              |------code is Not ok------>Dev
+    Note: It's a time taking process as the complexity of the application increases here
+    # Docker & Kubernetes
+
+
+### Case Scenario: Team of 3 eemployees
+            All have diff OS(Windows,Linux,Mac OS)
+Person1                               person2                                           person3
+Windows OS                            Linux OS                                          Mac OS
+(npm i)----->code 10-12----->(npm i) code 25-30---------------------------------------->code 40-50
+
+>>It works on my machine
+
+##### virtualization
+    (I could run virtualOS on top of my real time OS)
+
+            Virtual OS:Linux
+        
+            Base/Local OS :Windows
+
+>>Resources shared with Virtual OS:[RAM,ROM,GPU]   
+
+
+
+
+Linux                           Unix
+(4GB,500GB,2GB)                 (4GB,500GB,2GB)
+            Base Windows
+        8GB RAM, 1TB ROM, 4GB
+
+
+# Containerization (Docker)
+
+Linux                                             Unix
+                        
+                     Docker Engine   
+                        
+                        Base OS
+                        8GB,1TB
+
+# Docker (EC2):
+    >Image
+    >Containers(Servers)
+
+
+        >Docker Deamon---->Server
+        >Docker Client---->Client
+        >Cocker Swarm----->Orchestration
+
+#Kubernetes (Orchestra)
+        >Nodes
+            >Master Node (Orchestra)
+            >Child Node---||
+                          ||--POD
+                          ||--Development->Keeps close eye on POD

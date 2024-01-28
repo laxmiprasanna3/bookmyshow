@@ -24,7 +24,7 @@ const MovieHero = () => {
           <div className="flex flex-col-reverse gap-3 px-4 my-3">
             <div className="text-black flex flex-col gap-2 md:px-4">
               <h4>4.2k rating</h4>
-              <h4>Kannada, English, Hindi, Telegu, Tamil</h4>
+              <h4>Telugu, English, Hindi, Kannada, Tamil</h4>
               <h4>
                 {movie.runtime} min | {genres}
               </h4>
