@@ -21,8 +21,6 @@ const Poster = (props) => {
         </h3>
       </div>
     </Link>
-    // <div>{props.original_title}</div>
-    // <div>Poster</div>
   );
 };
 

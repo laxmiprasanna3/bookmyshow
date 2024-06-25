@@ -1,4 +1,4 @@
-# bookmyshow
+# streamscout
     >>React
     >>Tailwind
     >>React-Slick (Carousels)
@@ -26,7 +26,7 @@
 
 
  #   cmds:
- > create: npx create-reacr-app .
+ > create: npx create-react-app .
  > run: npm start
  > Tailwind: npm install -D tailwindcss postcss autoprefixer
              npx tailwindcss init

@@ -8,7 +8,7 @@ function NavSm() {
         <div>
           <h3 className="text-xl font-bold">It All Starts Here!!!</h3>
           <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
-            Miryalaguda <BiChevronDown />
+            Hyd <BiChevronDown />
           </span>
         </div>
         <div className="w-8 h-8">
@@ -40,7 +40,7 @@ function NavLg() {
         <div className="flex items-center w-1/2 gap-3">
           <div className="w-10 h-10">
             <img
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+              src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/06/attachment_135600241.png?auto=format&q=60&fit=max&w=930"
               alt="logo"
               className="w-full h-full"
             />
@@ -56,7 +56,7 @@ function NavLg() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white ">
-            Miryalaguda <BiChevronDown />
+           Hyd <BiChevronDown />
           </span>
           <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
             Sign In
@@ -73,7 +73,7 @@ function NavLg() {
 const MovieNavbar = () => {
   return (
     <nav className="bg-darkBackground-700 px-4 py-3">
-      {/* Mobile Screen Navbar */}
+      {/*small Screen Navbar */}
       <div className="md:hidden">
         <NavSm />
       </div>

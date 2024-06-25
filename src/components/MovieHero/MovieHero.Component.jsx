@@ -11,7 +11,7 @@ const MovieHero = () => {
   return (
     <>
       <div>
-        {/* mobile or tab screen size */}
+        {/* small size */}
         <div className="lg:hidden w-full">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}

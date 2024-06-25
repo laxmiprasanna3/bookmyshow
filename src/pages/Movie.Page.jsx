@@ -19,6 +19,14 @@ const MoviePage = () => {
   const [recommendedMovies, setRecommendedMovies] = useState([]);
 
   useEffect(() => {
+    const requestCast = async () => {
+      const getCast = await axios.get(`/movie/${id}/credits`);
+      setCast(getCast.data.cast);
+    };
+    requestCast();
+  }, [id]);
+
+  useEffect(() => {
     const requestSimilarMovies = async () => {
       const getSimilarMovies = await axios.get(`/movie/${id}/similar`);
       setSimilarMovies(getSimilarMovies.data.results);
@@ -151,7 +159,7 @@ const MoviePage = () => {
                   Visa Stream Offer
                 </h3>
                 <p className="text-gray-600">
-                  Get 50% off up to INR 150 on all RuPay card* on BookMyShow
+                  Get 50% off up to INR 150 on all RuPay card* on
                   Stream.
                 </p>
               </div>
@@ -164,7 +172,7 @@ const MoviePage = () => {
               <div className="flex flex-col items-start">
                 <h3 className="text-gray-700 text-xl font-bold">Film Pass</h3>
                 <p className="text-gray-600">
-                  Get 50% off up to INR 150 on all RuPay card* on BookMyShow
+                  Get 50% off up to INR 150 on all RuPay card* on 
                   Stream.
                 </p>
               </div>
@@ -199,7 +207,7 @@ const MoviePage = () => {
         <div className="my-8">
           <PosterSlider
             config={settings}
-            title="Recommended Movies"
+            title="Movies"
             posters={recommendedMovies}
             isDark={false}
           />
@@ -213,7 +221,7 @@ const MoviePage = () => {
         <div className="my-8">
           <PosterSlider
             config={settings}
-            title="BMS XCLUSICE"
+            title="XCLUSICE"
             posters={similarMovies}
             isDark={false}
           />

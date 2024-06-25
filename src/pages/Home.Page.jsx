@@ -16,7 +16,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const requestTopRatedMovies = async () => {
-      const getTopRatedMovies = await axios.get("/movie/top_rated");
+      const getTopRatedMovies = await axios.get("https://api.themoviedb.org/3/discover/movie?api_key=8609c61bad2a183b7a288df6d8d39b61&with_original_language=te");
       setrecommendedMovies(getTopRatedMovies.data.results);
     };
     requestTopRatedMovies();
@@ -50,8 +50,8 @@ const HomePage = () => {
 
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
-          title="Recommended Movies"
-          subtitle="List of Recommended Movies"
+          title="Telugu Movies"
+          subtitle="List of Telugu Movies"
           posters={recommendedMovies}
           isDark={false}
         />
@@ -59,7 +59,7 @@ const HomePage = () => {
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
           <div className="hidden md:flex">
-            <img
+          <img
               src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"
               alt="Rupay"
               className="w-full h-full"
